@@ -47,6 +47,12 @@ nav {
     font-size: 1rem; }
     .nav-top a:hover {
       color: #b3b3b3; }
+  @media screen and (min-width: 48rem) {
+    .nav-top {
+      font-size: 1.25rem; } }
+  @media screen and (min-width: 64rem) {
+    .nav-top {
+      font-size: 1.5rem; } }
 
 .header {
   margin-top: 1rem; }
@@ -55,10 +61,26 @@ nav {
   width: 100%;
   margin: .5rem auto;
   border: 2px solid #000000; }
+  @media screen and (min-width: 48rem) {
+    .logo {
+      width: 70%;
+      max-width: 60rem; } }
+  @media screen and (min-width: 64rem) {
+    .logo {
+      width: 40%;
+      margin: 1rem auto; } }
 
 .desc p {
   width: 90%;
   margin: 0 auto 1rem; }
+  @media screen and (min-width: 48rem) {
+    .desc p {
+      font-size: 1.25rem;
+      max-width: 60rem; } }
+  @media screen and (min-width: 64rem) {
+    .desc p {
+      font-size: 1.25rem;
+      margin: 1rem auto; } }
 
 button {
   width: 8rem;

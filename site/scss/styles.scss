@@ -7,6 +7,9 @@ $background-color-brown: #E47B20;
 
 $sans-serif-font: 'Ruda', sans-serif;
 
+$tablet: 'min-width: 48rem';
+$desktop: 'min-width: 64rem';
+
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -29,16 +32,13 @@ body {
 	font-family: $sans-serif-font;
 	text-align: center;
 }
-
 h1 {
 	margin: 0;
 }
-
 ul > li {
 	list-style-type: none;
 	margin-bottom: .5rem;
 }
-
 nav {
 	background-color: $background-color-brown;
 	width: 100%;
@@ -63,6 +63,12 @@ nav {
 	text-decoration: none;
 	font-size: 1rem;
 	}
+	@media screen and ($tablet) {
+		font-size: 1.25rem;
+	}
+	@media screen and ($desktop) {
+		font-size: 1.5rem;
+	}
 }
 .header {
 	margin-top: 1rem;
@@ -71,10 +77,26 @@ nav {
 	width: 100%;
 	margin: .5rem auto;
 	border: 2px solid #000000;
+	@media screen and ($tablet) {
+		width: 70%;
+		max-width: 60rem;
+	}
+	@media screen and ($desktop) {
+		width: 40%;
+		margin: 1rem auto;
+	}
 }
 .desc p {
 	width: 90%;
 	margin: 0 auto 1rem;
+	@media screen and ($tablet) {
+		font-size: 1.25rem;
+		max-width: 60rem;
+	}
+	@media screen and ($desktop) {
+		font-size: 1.25rem;
+		margin: 1rem auto;
+	}
 }
 button {
 	width: 8rem;
@@ -106,3 +128,4 @@ button {
 .copy {
 	margin: 1rem;
 }
+
