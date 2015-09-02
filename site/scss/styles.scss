@@ -1,1 +1,108 @@
-body {}
+$font-color: #FFFFFF;
+$link-color: #FFFFFF;
+$hover-link-color: darken($link-color, 30%);
+$text-shadow: 2px 2px 2px #000000;
+$background-color-sky: #70C5CE;
+$background-color-brown: #E47B20;
+
+$sans-serif-font: 'Ruda', sans-serif;
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	color: $font-color;
+	text-shadow: $text-shadow;
+	background-color: $background-color-sky;
+	font-family: $sans-serif-font;
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+ul > li {
+	list-style-type: none;
+	margin-bottom: .5rem;
+}
+
+nav {
+	background-color: $background-color-brown;
+	width: 100%;
+	line-height: 4rem;
+	vertical-align: middle;
+}
+.nav-top > li {
+	display: inline-block;
+	margin: 0 1rem 0 1rem;
+}
+.nav-top {
+	width: 100%;
+	position: relative;
+	margin: 0 0 0 -50%;
+	left: 50%;
+	text-align: center;
+	a {
+		color: $link-color;
+		&:hover {
+			color: $hover-link-color;
+		}
+	text-decoration: none;
+	font-size: 1rem;
+	}
+}
+.header {
+	margin-top: 1rem;
+}
+.logo {
+	width: 100%;
+	margin: .5rem auto;
+	border: 2px solid #000000;
+}
+.desc p {
+	width: 90%;
+	margin: 0 auto 1rem;
+}
+button {
+	width: 8rem;
+	font-size: 1.5rem;
+	box-shadow: 2px 2px 4px #000000;
+	margin-bottom: 1rem;
+	background-color: $background-color-brown;
+}
+.social {
+	width: 100%;
+	height: 4rem;
+	line-height: 5rem;
+	position: relative;
+	background-color: $background-color-brown;
+	margin: 0 0 1rem -50%;
+	left: 50%;
+	text-align: center;
+	li {
+	display: inline-block;
+	margin: 0 1rem 0 1rem;
+	}
+	a {
+		color: $link-color;
+		&:hover {
+			color: $hover-link-color;
+		}
+	}
+} 
+.copy {
+	margin: 1rem;
+}
