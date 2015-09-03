@@ -6,6 +6,7 @@ var imagemin = require('gulp-imagemin');
 var browserify = require('browserify');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
+var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
@@ -37,7 +38,7 @@ gulp.task('default', ['jshint', 'sass', 'watch']);
 // Minify index
 gulp.task('html', function() {
 	return gulp.src('site/index.html')
-		.pipe(minifyHTML())
+		//.pipe(minifyHTML())
 		.pipe(gulp.dest('build/'));
 });
 
@@ -52,9 +53,16 @@ gulp.task('scripts', function() {
 });
 
 // Styles build task, concantenates all the style files
-gulp.task('styles', function() {
+gulp.task('styles', ['sass'], function() {
 	return gulp.src('site/css/*.css')
 		.pipe(concat('styles.css'))
+		.pipe(gulp.dest('build/css'));
+});
+
+// Minify css in build/css
+gulp.task('minifyCSS', ['styles'], function() {
+	return gulp.src('build/css/*.css')
+		.pipe(minifyCSS({compatibility: 'ie8'}))
 		.pipe(gulp.dest('build/css'));
 });
 
@@ -66,5 +74,7 @@ gulp.task('images', function() {
 });
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jshint', 'sass', 'styles', 'html', 'scripts', 'images']);
+
+
 
