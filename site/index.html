@@ -6,6 +6,11 @@
         <title>Flappy Bird Clone Landing Page</title>
         <meta name="description" content="This is a FlappyBird clone site.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+    		// Picture element HTML5 shiv
+    		document.createElement( "picture" );
+  		</script>
+        <script src="js/picturefill.js" async></script>
         <style>
     		html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased}*,*:before,*:after{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}body{color:#fff;text-shadow:2px 2px 2px #000;background-color:#70C5CE;font-family:"Ruda",sans-serif;text-align:center}h1{margin:0}ul>li{list-style-type:none;margin-bottom:.5rem}nav{background-color:#E47B20;width:100%;line-height:4rem;vertical-align:middle}.nav-top>li{display:inline-block;margin:0 1rem}.nav-top{width:100%;position:relative;margin:0 0 0 -50%;left:50%;text-align:center}.nav-top a{color:#fff;text-decoration:none;font-size:1rem}.nav-top a:hover{color:#b3b3b3}@media screen and (min-width:48rem){.nav-top{font-size:1.25rem}}@media screen and (min-width:64rem){.nav-top{font-size:1.5rem}}.header{margin-top:1rem}.logo{width:100%;margin:.5rem auto;border:2px solid #000}@media screen and (min-width:48rem){.logo{width:70%;max-width:60rem}}@media screen and (min-width:64rem){.logo{width:40%;margin:1rem auto}}.desc p{width:90%;margin:0 auto 1rem}@media screen and (min-width:48rem){.desc p{font-size:1.25rem;max-width:60rem}}@media screen and (min-width:64rem){.desc p{font-size:1.25rem;margin:1rem auto}}
     	</style>
@@ -28,7 +33,13 @@
 				<h2 class="phrase">He flaps...  he flies... he is...</h2>
 			</li>
 			<li>
-				<img src="img/flappybird.jpg" class="logo">
+				<img 
+					srcset="img/flappybird-large.jpg 1920w,
+							img/flappybird-medium.jpg 960w,
+							img/flappybird-small.jpg 480w,"
+					sizes="100vw"
+					src="img/flappybird-medium.jpg" class="logo"
+					alt="Flappybird Logo">
 			</li>
 		</ul>
 	</section>
